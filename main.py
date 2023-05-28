@@ -17,7 +17,7 @@ connection = authentication.connections_map[authentication.Connections.LOCAL]
 
 dataset_name = 'BPIC14'
 use_sample = True
-use_preprocessed_files = False
+use_preprocessed_files = True
 
 semantic_header_path = Path(f'json_files/{dataset_name}.json')
 

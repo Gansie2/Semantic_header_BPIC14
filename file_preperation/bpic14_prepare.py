@@ -19,14 +19,14 @@ incident = pd.read_csv(os.path.join(input_path, 'Detail_Incident.csv'), keep_def
                        dtype={"Urgency": "str"})
 # only keep numeric values for urgency column and convert to Int64
 incident["Urgency"] = incident["Urgency"].str.replace('(\D+)', '', regex=True)
-incident["Urgency"] = incident["Urgency"].astype('Int64')
+# incident["Urgency"] = incident["Urgency"].astype('Int64')
 incident.to_csv(os.path.join(output_path, "BPIC14Incident.csv"))
 
 interaction = pd.read_csv(os.path.join(input_path, 'Detail_Interaction.csv'), keep_default_na=True, sep=';',
                           dtype={"Urgency": "str"})
 # only keep numeric values for urgency column and convert to Int64
 interaction["Urgency"] = interaction["Urgency"].str.replace('(\D+)', '', regex=True)
-interaction["Urgency"] = interaction["Urgency"].astype('Int64')
+# interaction["Urgency"] = interaction["Urgency"].astype('Int64')
 interaction.to_csv(os.path.join(output_path, "BPIC14Interaction.csv"))
 
 end = time.time()
